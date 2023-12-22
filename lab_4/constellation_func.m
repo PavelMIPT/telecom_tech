@@ -22,8 +22,8 @@ function [Dictionary, Bit_depth_Dict] = constellation_func(Constellation)
     % Mean power of every constellation must be equel 1.
     % Make the function to calculate the norm, 
     % which can be applied for every constellation
-    % norm = Norm(values);
-    % values = values./norm;
+    norm = Norm(values);
+    values = values./norm;
     Dictionary = dictionary(keys, values);
 end
 
